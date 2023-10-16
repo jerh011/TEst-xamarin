@@ -9,8 +9,11 @@ namespace MVVM_implementacion_Jerh.VistaModelo
 {
     public class VMpagina1:BaseViewModel
     {
+       
         #region VARIABLES
-        string _Texto;
+        string _N1;
+        string _N2;
+        string _R;
         #endregion
         #region Contructor
         public VMpagina1(INavigation navigation)
@@ -19,19 +22,37 @@ namespace MVVM_implementacion_Jerh.VistaModelo
         }
         #endregion
         #region Objetivo;
-        public string Texto
+        public string N1
         {
-            get { return _Texto; }
-            set { SetValue(ref _Texto, value); }
+            get { return _N1; }
+            set { SetValue(ref _N1, value); }
+        }
+        public string N2
+        {
+            get { return _N2; }
+            set { SetValue(ref _N2, value); }
+        }
+        public string R
+        {
+            get { return _R; }
+            set { SetValue(ref _R, value); }
         }
         #endregion
         #region PROCESOS
-        public async Task alerta()
+        public void Sumar()
         {
-            DisplayAlert("Titulo", _Texto, "Okay");
+            double n1 = 0;
+            double n2 = 0;
+            double r = 0;
+
+            n1=Convert.ToDouble(N1);
+            n2 = Convert.ToDouble(N2);
+            r = Convert.ToDouble(R);
+            r=n1+ n2;
+            R=r.ToString();
         }
 
-        public void ProcesoSimple()
+        public async Task Procesoasync()
         {
 
         }
@@ -40,8 +61,8 @@ namespace MVVM_implementacion_Jerh.VistaModelo
      
         #endregion.
         #region COMANDOS
-        public ICommand Alertacommand => new Command(async ()=> await alerta());
-        public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
+        public ICommand Procesoasynccommand => new Command(async ()=> await Procesoasync());
+        public ICommand Suymarcommand => new Command(Sumar);
         #endregion
 
     }

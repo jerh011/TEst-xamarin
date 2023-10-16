@@ -6,15 +6,25 @@
         <StackLayout VerticalOptions="Center">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
 
-                <Label Text="Mensaje:" TextColor="White" FontAttributes="Bold" VerticalOptions="Center"/>
-                <Entry PlaceholderColor="White" Placeholder="Escribir su mensaje" HorizontalOptions="StartAndExpand" Text="{Binding Texto}"/>
+                <Label Text="#1:" TextColor="White" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Entry PlaceholderColor="White" Placeholder="Escribir su mensaje" HorizontalOptions="StartAndExpand" Text="{Binding N1}" Keyboard="Numeric"/>
                 
             
             </StackLayout>
-            
-            <Button Text="Guardar" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding Alertacommand}"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                <Label Text="#2:" TextColor="White" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Entry PlaceholderColor="White" Placeholder="Escribir su mensaje" HorizontalOptions="StartAndExpand" Text="{Binding N2}" Keyboard="Numeric"/>
+
+
+            </StackLayout>
+
+            <Button Text="Guardar" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding Suymarcommand}"/>
+            <Label Text="{Binding R}" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" FontSize="35"  />
         </StackLayout>
         
     </Grid>
 </ContentPage>
 
+
+    0
