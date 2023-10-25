@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MVVM_implementacion_Jerh.Vista.Page1">
+             x:Class="MVVM_implementacion_Jerh.Vista.Page1"
+             NavigationPage.HasNavigationBar="False">
     <Grid BackgroundColor="Aqua">
         <StackLayout VerticalOptions="Center">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
@@ -21,10 +22,13 @@
 
             <Button Text="Guardar" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding Suymarcommand}"/>
             <Label Text="{Binding R}" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" FontSize="35"  />
+
+
+
+            <Button Text="Ir a pagina 2" HorizontalOptions="Center" CornerRadius="5" BackgroundColor="white" 
+                    FontAttributes="Bold" Command="{Binding PNavegarpagina2command}"/>
+
         </StackLayout>
         
     </Grid>
 </ContentPage>
-
-
-    0

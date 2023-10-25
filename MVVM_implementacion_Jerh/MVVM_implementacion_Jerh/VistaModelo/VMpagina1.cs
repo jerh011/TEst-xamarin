@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVM_implementacion_Jerh.Vista;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,10 @@ namespace MVVM_implementacion_Jerh.VistaModelo
         }
         #endregion
         #region PROCESOS
+        public async Task NavegarPage2()
+        {
+            await Navigation.PushAsync(new Page2());
+        }
         public void Sumar()
         {
             double n1 = 0;
@@ -52,16 +57,13 @@ namespace MVVM_implementacion_Jerh.VistaModelo
             R=r.ToString();
         }
 
-        public async Task Procesoasync()
-        {
-
-        }
+        
         #endregion.
         #region CONTRUCTOR
      
         #endregion.
         #region COMANDOS
-        public ICommand Procesoasynccommand => new Command(async ()=> await Procesoasync());
+        public ICommand PNavegarpagina2command => new Command(async ()=> await NavegarPage2());
         public ICommand Suymarcommand => new Command(Sumar);
         #endregion
 

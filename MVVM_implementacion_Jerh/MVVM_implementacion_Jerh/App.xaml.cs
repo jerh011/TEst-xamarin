@@ -10,7 +10,7 @@ namespace MVVM_implementacion_Jerh
         public App()
         {
             InitializeComponent();
-            MainPage = new Page1();
+            MainPage = new NavigationPage(new Page1());
         }
 
         protected override void OnStart()
@@ -24,5 +24,8 @@ namespace MVVM_implementacion_Jerh
         protected override void OnResume()
         {
         }
+    
+
+        
     }
 }

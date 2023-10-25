@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM_implementacion_Jerh.Vista.Page2">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image Source="https://lh3.googleusercontent.com/fife/AK0iWDyethPz6TRQda-9M1DvKJ3Blih8BZjB3oLHz-ZeOUgh9ID_hRS4B8qzM-znjrjCS9fwdYOTbmQSGINdvaDq54_1GSQGFKs2Rdx25vPXmp9Se1GcpDTbzSgNnWbrIXDXhKxVpK6pBADlqQiDXcTYuG0RbaA7Jk1rce7ROMVIyjQHTUNYM155a5bp0XO_iOhL3OuWSIecY0WTOxbyU84MmhBNHnxb_6SMJtlZAR8RaGruqdfdL-EQtNkiKZnurdJsqLVmZQB4WOxOr-1hD1H_KRQ75eg8IBtnEVBmUF6RewgmHg6qZclSytWT0vt5zXosFgAg_cZklBR3oj8farLO_iMHhYYZYb3uAcDaNRDGBDH1vrgPlb_z5KMQrw_puWHDQKkvX7OmehPkqw1kRwaglzNpbUMOoYls01bCh4aZVsrzJcjGMT6-DGmwp1RZfjDjQiLToJcAbSOO7vHPlihtl9F_srsjb0TTQN-TuSWAi1hiJ5PbdFIGICws8jkXKpI48D7gTCzr1EKxneIA8fYszJZf4Cum7QmHNrptMm1mh0NNwoSSk18Buu-4pD2lXjgh2XZInI3bZzqvJR6YtVJUOvTjS90OCGvaEagTOC4Zg9q1EQdtR4UiTV2y0fHP_xo5EXessLzfKhEqcWYAp612k2zlC2D4Pe9nvn6bTkWtnpPKRXBBDqfbPOAkAHnvJ9PzJTolpLsRpMSVqLdpl6yJSW9Is-SKgY05fj7lwOpPQ_Kz0iEuhi77rhR0G_kVp5JIQgir1N6OF8gb2JiOnD8uPNOV5rnCky0c2i2uvuddjCpfBa1XbR55WUjCfbKUDRvvBfuBi9naNMRgx65RtYJ9DIRlHsV39u4xKo-d1JuDWRoFKoOMzU5FH9jU5Zt6jr9rvvqBOAvMqGCxT1elVRYb2fPO6GUJ5tKpxsVt_uwQQGlxc-H8ri9so5j5NsDDPjntJs0iKhx0nNEeME8rjuKeTuTBb-DQ8-AwWHeoinoTgSc9yfkrIhT4K3yXvcM0PrksCRAiatpkaMS0AdtsQk3TP3AgD4sJUAGk_e9__SVzEQUsL02OXctCItAdxZ7LGly_PSl-WgRU3b4eN3U3JtkrCACfgGMPqpV2Fl5VCotA0mythr0sTDoixkj7sRxBnrD1_oKY-gTCM7tD-iz4ixRtF_o27T6EMELL-rro-FebZubxFf-edoZfx_kfwAYc0HDt1TeA9oF88Na_LjbV2vNHNuQWIkfWx_V1qkany3yjl0rfw7WWzuXlyrYg5z3FM2JMHTtwzf5Nx4xp1F5Nz4iJdOtappaiI9VEq-8K_hxxJnTLY9vavrnLeaCNe0UuEmIE99Sx2xvH9kh_X5CU8FD4WRQl65kS-FckY6sM4y0dZ5TcQWGbATJX_FAJUv6FfI9PbTkXb95SK1MhNDlJfJFazbEDs0z073ap7Qp4OqhpNXOXDIuMB2jV8WZ-w4-UL0mgMzKjK2pqculzrF8Iwu8Im0i-OMxgXcDUAC0paYIimd8ag6Nae0Ut5hMtdIKr_7tdYgWQduDZrF0=w1920-h955"
+                   VerticalOptions="Start" HeightRequest="50" HorizontalOptions="Start" Margin="10"/>
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Volvercommand}"/>
+            </Image.GestureRecognizers>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
