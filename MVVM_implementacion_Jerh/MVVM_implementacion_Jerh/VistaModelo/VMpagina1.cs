@@ -15,6 +15,7 @@ namespace MVVM_implementacion_Jerh.VistaModelo
         string _N1;
         string _N2;
         string _R;
+        string _TipoUsuario;
         #endregion
         #region Contructor
         public VMpagina1(INavigation navigation)
@@ -28,6 +29,12 @@ namespace MVVM_implementacion_Jerh.VistaModelo
             get { return _N1; }
             set { SetValue(ref _N1, value); }
         }
+
+        public string TipoUsuario
+        {
+            get { return _TipoUsuario; }
+            set { SetValue(ref _TipoUsuario, value); }
+        }
         public string N2
         {
             get { return _N2; }
@@ -38,6 +45,15 @@ namespace MVVM_implementacion_Jerh.VistaModelo
             get { return _R; }
             set { SetValue(ref _R, value); }
         }
+
+        public string SeleccionarTipoUsuario
+        {
+            get { return _TipoUsuario; }
+            set { SetValue(ref _TipoUsuario, value);
+                TipoUsuario = _TipoUsuario;
+            }
+        }
+
         #endregion
         #region PROCESOS
         public async Task NavegarPage2()
