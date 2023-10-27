@@ -72,11 +72,19 @@ namespace MVVM_implementacion_Jerh.VistaModelo
             r=n1+ n2;
             R=r.ToString();
         }
+        public void GetFecha()
+        {
+            DatePicker datePicker = new DatePicker
+            {
+                MinimumDate = new DateTime(2023, 1, 1),
+                MaximumDate = new DateTime(2023, 12, 31),
+                Date = new DateTime(2023, 10, 26)
+            };
+        }
 
-        
         #endregion.
         #region CONTRUCTOR
-     
+
         #endregion.
         #region COMANDOS
         public ICommand PNavegarpagina2command => new Command(async ()=> await NavegarPage2());

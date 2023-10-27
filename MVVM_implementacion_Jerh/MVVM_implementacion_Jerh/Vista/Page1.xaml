@@ -37,9 +37,17 @@
                             <x:String>Empleado</x:String>
                         </x:Array>
                     </Picker.ItemsSource>
+               
                 </Picker>
+                
+
             </StackLayout>
-        
+            <Label Text="Fecha" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" FontSize="35" HorizontalOptions="Center"/>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <DatePicker MinimumDate="{Binding MinDate}" MaximumDate="{Binding MaxDate}" Date="{Binding GetFecha}" TextColor="White"
+                            />
+            </StackLayout>
         </StackLayout>
         
     </Grid>

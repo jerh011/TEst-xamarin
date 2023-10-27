@@ -61,13 +61,16 @@ namespace MVVM_implementacion_Jerh.VistaModelo
                     Nombre="Eloy",Imagen="https://i.ibb.co/rx66K3W/conejo.png"
                 }
             };
-        
-        
+        }
+        public async Task Alerta(Musuarios parametros)
+        {
+            await DisplayAlert("Titulo", parametros.Nombre, "Ok");
         }
         #endregion.
         #region CONTRUCTOR
         public ICommand Volvercommand => new Command(async () => await Volver());
         //public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
+        public ICommand Alertacommand => new Command<Musuarios>(async (p) => await Alerta(p));
         #endregion.
     }
 }
