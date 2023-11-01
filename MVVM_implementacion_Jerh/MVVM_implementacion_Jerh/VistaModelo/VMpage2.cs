@@ -46,20 +46,17 @@ namespace MVVM_implementacion_Jerh.VistaModelo
             {
                 new Musuarios
                 {
-                    Nombre="Frank",Imagen="https://i.ibb.co/zGtXvry/conejo-de-pascua.png"
+                    Nombre="Orlando",Imagen="https://i.ibb.co/Qv0HsPy/mapache.png"
                 },
                 new Musuarios
                 {
-                    Nombre="Juan",Imagen="https://i.ibb.co/6WyXntz/conejo-2.png"
+                    Nombre="Copito",Imagen="https://i.ibb.co/LpYpyzw/copo-de-nieve.png"
                 },
                 new Musuarios
                 {
-                    Nombre="Carlos",Imagen="https://i.ibb.co/Jxp1WGb/conejo-1.png"
-                },
-                new Musuarios
-                {
-                    Nombre="Eloy",Imagen="https://i.ibb.co/rx66K3W/conejo.png"
+                    Nombre="Eloy",Imagen="https://i.ibb.co/sP671j9/conejo.png"
                 }
+
             };
         }
         public async Task Alerta(Musuarios parametros)

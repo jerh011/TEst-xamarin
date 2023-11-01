@@ -10,7 +10,7 @@ namespace MVVM_implementacion_Jerh
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new Page1());
+            MainPage = new NavigationPage(new Menuprincipal());
         }
 
         protected override void OnStart()
