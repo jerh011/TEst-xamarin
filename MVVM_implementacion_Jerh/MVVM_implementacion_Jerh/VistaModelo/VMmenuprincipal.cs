@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace MVVM_implementacion_Jerh.VistaModelo
 {
-    internal class VMmenuprincipal : BaseViewModel
+    public class VMmenuprincipal : BaseViewModel
     {
         #region VARIABLES
         string _Texto;
@@ -48,12 +48,12 @@ namespace MVVM_implementacion_Jerh.VistaModelo
                 new Mmenuprincipal
                 {
                     Paginas="xd",
-                    Iconos="https://i.ibb.co/yy9q8x5/charmander.png\r\n"
+                    Iconos="https://i.ibb.co/yy9q8x5/charmander.png"
                 },
                 new Mmenuprincipal
                 {
                     Paginas="hola",
-                    Iconos="https://i.ibb.co/d2H6zYW/bullbasaur.png\r\n"
+                    Iconos="https://i.ibb.co/d2H6zYW/bullbasaur.png"
                 },
                 new Mmenuprincipal
                 {
