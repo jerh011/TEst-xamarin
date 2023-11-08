@@ -1,4 +1,5 @@
 ﻿using MVVM_implementacion_Jerh.Vista;
+using MVVM_implementacion_Jerh.Vista.Pokemon;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,7 +11,7 @@ namespace MVVM_implementacion_Jerh
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new Menuprincipal());
+            MainPage = new NavigationPage(new Listapokemon());
         }
 
         protected override void OnStart()

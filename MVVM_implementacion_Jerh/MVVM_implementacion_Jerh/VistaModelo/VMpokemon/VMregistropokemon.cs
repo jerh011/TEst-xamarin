@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-
+using MVVM_implementacion_Jerh.Modelo;
 namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 {
     public class VMregistropokemon: BaseViewModel

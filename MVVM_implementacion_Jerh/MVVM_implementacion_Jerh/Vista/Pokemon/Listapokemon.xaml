@@ -6,6 +6,7 @@
 
     <Grid RowDefinitions="60,*"
           BackgroundColor="#FSF6F6">
+        
         <Label Text="POKEDEX"
                HorizontalOptions="Center"
                VerticalOptions="Center"
