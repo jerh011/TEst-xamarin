@@ -12,8 +12,14 @@
             <Image Source="https://i.ibb.co/Xk4ZkSp/International-Pok-mon-logo-svg.png"
                    HorizontalOptions="CenterAndExpand"/>
             <Image Source="https://i.ibb.co/MCTn4b2/pokebola.png"/>
-
-
+        </StackLayout>
+        <StackLayout Grid.Row="1" Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre: "
+                       TextColor="White" 
+                       FontSize="Bold"
+                       VerticalOptions="Center"/>
+            </StackLayout>
         </StackLayout>
     </Grid>
 
