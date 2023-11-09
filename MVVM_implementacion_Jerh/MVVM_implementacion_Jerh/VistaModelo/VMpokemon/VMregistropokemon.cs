@@ -14,10 +14,12 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 
 
         #region VARIABLES
-        string _N1;
-        string _N2;
-        string _R;
-        string _TipoUsuario;
+        string _TxtColorFondo;
+        string _TxtColorPoder;
+        string _TxtNombre;
+        string _TxtNro;
+        string _TxtPoder;
+        string _TxtIcono;
         #endregion
         #region Contructor
         public VMregistropokemon(INavigation navigation)
@@ -26,36 +28,35 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         }
         #endregion
         #region Objetivo;
-        public string N1
+        public string TxtColorFondo
         {
-            get { return _N1; }
-            set { SetValue(ref _N1, value); }
+            get { return _TxtColorFondo; }
+            set { SetValue(ref _TxtColorFondo, value); }
         }
-
-        public string TipoUsuario
+        public string TxtColorPoder
         {
-            get { return _TipoUsuario; }
-            set { SetValue(ref _TipoUsuario, value); }
+            get { return _TxtColorPoder; }
+            set { SetValue(ref _TxtColorPoder, value); }
         }
-        public string N2
+        public string TxtNombre
         {
-            get { return _N2; }
-            set { SetValue(ref _N2, value); }
+            get { return _TxtNombre; }
+            set { SetValue(ref _TxtNombre, value); }
         }
-        public string R
+        public string TxtNro
         {
-            get { return _R; }
-            set { SetValue(ref _R, value); }
+            get { return _TxtNro; }
+            set { SetValue(ref _TxtNro, value); }
         }
-
-        public string SeleccionarTipoUsuario
+        public string TxtPoder
         {
-            get { return _TipoUsuario; }
-            set
-            {
-                SetValue(ref _TipoUsuario, value);
-                TipoUsuario = _TipoUsuario;
-            }
+            get { return _TxtPoder; }
+            set { SetValue(ref _TxtPoder, value); }
+        }
+        public string TxtIcono
+        {
+            get { return _TxtIcono; }
+            set { SetValue(ref _TxtIcono, value); }
         }
 
         #endregion
@@ -64,18 +65,7 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         {
             await Navigation.PushAsync(new Page2());
         }
-        public void Sumar()
-        {
-            double n1 = 0;
-            double n2 = 0;
-            double r = 0;
-
-            n1 = Convert.ToDouble(N1);
-            n2 = Convert.ToDouble(N2);
-            r = Convert.ToDouble(R);
-            r = n1 + n2;
-            R = r.ToString();
-        }
+        
         public void GetFecha()
         {
             DatePicker datePicker = new DatePicker
@@ -91,8 +81,8 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 
         #endregion.
         #region COMANDOS
-        public ICommand PNavegarpagina2command => new Command(async () => await NavegarPage2());
-        public ICommand Suymarcommand => new Command(Sumar);
+        //public ICommand PNavegarpagina2command => new Command(async () => await NavegarPage2());
+       // public ICommand Suymarcommand => new Command(Sumar);
         #endregion
 
 
