@@ -27,7 +27,8 @@
                        TextColor="#ffeb72"
                        PlaceholderColor="White"
                        TextTransform="Lowercase"
-                       HorizontalOptions="StartAndExpand"/>
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding TxtNombre}"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -42,7 +43,8 @@
                        TextColor="#ffeb72"
                        PlaceholderColor="White"
                        TextTransform="Lowercase"
-                       HorizontalOptions="StartAndExpand"/>
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding TxtColorFondo}"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -50,14 +52,17 @@
                        TextColor="White" 
                        FontAttributes="Bold"
                        VerticalOptions="Center"
-                       FontSize="18"/>
+                       FontSize="18"
+                       />
 
                 <Entry Placeholder="Ingrese el número" 
                        FontAttributes="Bold" 
                        TextColor="#ffeb72"
                        PlaceholderColor="White"
                        TextTransform="Lowercase"
-                       HorizontalOptions="StartAndExpand"/>
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding TxtNro}"
+                       Keyboard="Numeric"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -71,8 +76,9 @@
                        FontAttributes="Bold" 
                        TextColor="#ffeb72"
                        PlaceholderColor="White"
-                       TextTransform="Lowercase"
-                       HorizontalOptions="StartAndExpand"/>
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding TxtIcono}"
+                       />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -87,7 +93,8 @@
                        TextColor="#ffeb72"
                        PlaceholderColor="White"
                        TextTransform="Lowercase"
-                       HorizontalOptions="StartAndExpand"/>
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding TxtPoder}"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -102,7 +109,9 @@
                        TextColor="#ffeb72"
                        PlaceholderColor="White"
                        TextTransform="Lowercase"
-                       HorizontalOptions="StartAndExpand"/>
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding TxtColorPoder}"/>
+
             </StackLayout>
 
             <StackLayout Orientation="Horizontal"
@@ -122,24 +131,24 @@
                        HorizontalOptions="Center"
                        CornerRadius="15"
                        Margin="0,-38,0,0"
-                       BackgroundColor="#AED4D8">
+                      BackgroundColor="{Binding TxtColorFondo}">
                     <StackLayout 
                         Margin="0,70,0,0">
-                        <Label Text="#001"/>
-                        <Label Text="Nombre"
+                        <Label Text="{Binding TxtNro}"/>
+                        <Label Text="{Binding TxtNombre}"
                                CharacterSpacing="1"
                                FontSize="20"
                                Margin="0,0,0,5"/>
-                        <Button Text="Hoja"
+                        <Button Text="{Binding TxtPoder}"
                                 CornerRadius="30"
                                 HorizontalOptions="Start"
                                 TextTransform="None"
                                 HeightRequest="40"
-                                BackgroundColor="#7DAC54"/>
+                                BackgroundColor="{Binding TxtPoder}"/>
                     </StackLayout>
                 </Frame>
 
-                <Image Source="https://i.ibb.co/SmGxVPD/Bulbasaur.webp"
+                <Image Source="{Binding TxtIcono}"
                        Grid.RowSpan="2"
                        HeightRequest="160"
                        VerticalOptions="StartAndExpand"/>

@@ -13,7 +13,7 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         ////////////////////////////
 
 
-        #region VARIABLES
+       #region VARIABLES
         string _TxtColorFondo;
         string _TxtColorPoder;
         string _TxtNombre;
