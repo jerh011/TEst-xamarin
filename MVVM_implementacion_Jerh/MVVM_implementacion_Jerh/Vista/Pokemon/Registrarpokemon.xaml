@@ -15,6 +15,7 @@
         </StackLayout>
         
         <StackLayout Grid.Row="1" Margin="10">
+            <!--Nombre-->
             <StackLayout Orientation="Horizontal">
                 <Label Text="Nombre: "
                        TextColor="White" 
@@ -30,7 +31,7 @@
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding TxtNombre}"/>
             </StackLayout>
-
+            <!--Ingrese el color fondo-->
             <StackLayout Orientation="Horizontal">
                 <Label Text="color fondo: "
                        TextColor="White" 
@@ -46,7 +47,7 @@
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding TxtColorFondo}"/>
             </StackLayout>
-
+            <!--Ingrese el número-->
             <StackLayout Orientation="Horizontal">
                 <Label Text="Número: "
                        TextColor="White" 
@@ -64,7 +65,7 @@
                        Text="{Binding TxtNro}"
                        Keyboard="Numeric"/>
             </StackLayout>
-
+                    <!--Icono-->
             <StackLayout Orientation="Horizontal">
                 <Label Text="Icono: "
                        TextColor="White" 
@@ -80,7 +81,7 @@
                        Text="{Binding TxtIcono}"
                        />
             </StackLayout>
-
+            <!--Ingrese el poder-->
             <StackLayout Orientation="Horizontal">
                 <Label Text="Poder: "
                        TextColor="White" 
@@ -92,11 +93,10 @@
                        FontAttributes="Bold" 
                        TextColor="#ffeb72"
                        PlaceholderColor="White"
-                       TextTransform="Lowercase"
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding TxtPoder}"/>
             </StackLayout>
-
+            <!--Ingrese el color del poder-->
             <StackLayout Orientation="Horizontal">
                 <Label Text="Color del poder: "
                        TextColor="White" 
@@ -113,7 +113,7 @@
                        Text="{Binding TxtColorPoder}"/>
 
             </StackLayout>
-
+           
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="Center">
                 <Image Source="https://i.ibb.co/2v6RK8d/eye.png"
@@ -144,7 +144,7 @@
                                 HorizontalOptions="Start"
                                 TextTransform="None"
                                 HeightRequest="40"
-                                BackgroundColor="{Binding TxtPoder}"/>
+                                BackgroundColor="{Binding TxtColorPoder}"/>
                     </StackLayout>
                 </Frame>
 
