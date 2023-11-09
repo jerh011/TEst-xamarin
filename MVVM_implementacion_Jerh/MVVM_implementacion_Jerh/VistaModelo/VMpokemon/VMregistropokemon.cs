@@ -66,15 +66,7 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
             await Navigation.PushAsync(new Page2());
         }
         
-        public void GetFecha()
-        {
-            DatePicker datePicker = new DatePicker
-            {
-                MinimumDate = new DateTime(2023, 1, 1),
-                MaximumDate = new DateTime(2023, 12, 31),
-                Date = new DateTime(2023, 10, 26)
-            };
-        }
+       
 
         #endregion.
         #region CONTRUCTOR
