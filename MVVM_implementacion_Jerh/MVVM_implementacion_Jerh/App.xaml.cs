@@ -12,7 +12,7 @@ namespace MVVM_implementacion_Jerh
         {
             InitializeComponent();
             //MainPage = new NavigationPage(new Listapokemon());
-            MainPage = new NavigationPage(new Registrarpokemon());
+            MainPage = new NavigationPage(new Listapokemon());
         }
 
         protected override void OnStart()

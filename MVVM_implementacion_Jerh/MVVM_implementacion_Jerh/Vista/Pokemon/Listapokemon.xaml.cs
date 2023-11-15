@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MVVM_implementacion_Jerh.VistaModelo.VMpokemon;
+using MVVM_implementacion_Jerh.Vista.Pokemon;
 
 namespace MVVM_implementacion_Jerh.Vista.Pokemon
 {
@@ -15,6 +17,7 @@ namespace MVVM_implementacion_Jerh.Vista.Pokemon
         public Listapokemon()
         {
             InitializeComponent();
+            BindingContext = new VMlistapokemon(Navigation);
         }
     }
 }

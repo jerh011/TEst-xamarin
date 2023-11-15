@@ -7,8 +7,13 @@
     <Grid RowDefinitions="80,*"
           BackgroundColor="#1d1d1d">
         <StackLayout Orientation="Horizontal" Padding="15">
-            
-            <Image Source="https://i.ibb.co/qNhwNHd/flecha-izquierda.png" WidthRequest="40"/>
+
+            <Image Source="https://i.ibb.co/qNhwNHd/flecha-izquierda.png" WidthRequest="40">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Volvercommand}"/>
+                </Image.GestureRecognizers>
+
+            </Image>
             <Image Source="https://i.ibb.co/Xk4ZkSp/International-Pok-mon-logo-svg.png"
                    HorizontalOptions="CenterAndExpand"/>
             <Image Source="https://i.ibb.co/MCTn4b2/pokebola.png"/>

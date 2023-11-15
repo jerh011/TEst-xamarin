@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using MVVM_implementacion_Jerh.Modelo;
+using MVVM_implementacion_Jerh.Vista.Pokemon;
 namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 {
     public class VMlistapokemon:BaseViewModel
@@ -60,38 +61,21 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 
         #endregion
         #region PROCESOS
-        public async Task NavegarPage2()
+        public async Task IrARegistro()
         {
-            await Navigation.PushAsync(new Page2());
+            await Navigation.PushAsync(new Registrarpokemon());
         }
         public void Sumar()
         {
-            double n1 = 0;
-            double n2 = 0;
-            double r = 0;
-
-            n1 = Convert.ToDouble(N1);
-            n2 = Convert.ToDouble(N2);
-            r = Convert.ToDouble(R);
-            r = n1 + n2;
-            R = r.ToString();
+          
         }
-        public void GetFecha()
-        {
-            DatePicker datePicker = new DatePicker
-            {
-                MinimumDate = new DateTime(2023, 1, 1),
-                MaximumDate = new DateTime(2023, 12, 31),
-                Date = new DateTime(2023, 10, 26)
-            };
-        }
-
+       
         #endregion.
         #region CONTRUCTOR
 
         #endregion.
         #region COMANDOS
-        public ICommand PNavegarpagina2command => new Command(async () => await NavegarPage2());
+        public ICommand IrARegistrocommand => new Command(async () => await IrARegistro());
         public ICommand Suymarcommand => new Command(Sumar);
         #endregion
 

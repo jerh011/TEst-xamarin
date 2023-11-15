@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using MVVM_implementacion_Jerh.Modelo;
+using MVVM_implementacion_Jerh.Datos;
+
 namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 {
     public class VMregistropokemon: BaseViewModel
@@ -61,9 +63,14 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 
         #endregion
         #region PROCESOS
-        public async Task NavegarPage2()
+        public async Task Insertar() {
+            var funcion = new DPokemon(); 
+            var parametros = new List<string>();
+        
+        }
+        public async Task Volver()
         {
-            await Navigation.PushAsync(new Page2());
+            await Navigation.PopAsync();
         }
         
        
@@ -73,8 +80,8 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 
         #endregion.
         #region COMANDOS
-        //public ICommand PNavegarpagina2command => new Command(async () => await NavegarPage2());
-       // public ICommand Suymarcommand => new Command(Sumar);
+        public ICommand Volvercommand => new Command(async () => await Volver());
+       
         #endregion
 
 
