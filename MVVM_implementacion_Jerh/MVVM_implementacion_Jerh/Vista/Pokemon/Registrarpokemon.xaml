@@ -32,7 +32,7 @@
                        FontAttributes="Bold" 
                        TextColor="#ffeb72"
                        PlaceholderColor="White"
-                       TextTransform="Lowercase"
+                     
                        HorizontalOptions="StartAndExpand"
                        Text="{Binding TxtNombre}"/>
             </StackLayout>
@@ -175,7 +175,8 @@
                     CornerRadius="15"
                     FontSize="25"
                     WidthRequest="60"
-                    HeightRequest="60"/>
+                    HeightRequest="60"
+                    Command="{Binding Insertarcommand}"/>
 
             </Frame>
 

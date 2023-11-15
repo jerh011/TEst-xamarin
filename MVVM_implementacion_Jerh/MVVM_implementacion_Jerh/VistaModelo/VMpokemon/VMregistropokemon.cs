@@ -65,21 +65,31 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         #region PROCESOS
         public async Task Insertar() {
             var funcion = new DPokemon(); 
-            var parametros = new List<string>();
-        
+            var parametros = new Mpokemon();
+            parametros.Colorfondo = TxtColorFondo;
+            parametros.ColorPoder = TxtColorPoder;
+            parametros.Icono= TxtIcono;
+            parametros.Nombre= TxtNombre;
+            parametros.NroOrden = TxtNro;
+            parametros.Poder= TxtPoder;
+            await funcion.Insertarpokemon(parametros);
+            await Volver();
         }
+
         public async Task Volver()
         {
             await Navigation.PopAsync();
         }
-        
-       
+
+
 
         #endregion.
         #region CONTRUCTOR
 
         #endregion.
         #region COMANDOS
+        public ICommand Insertarcommand => new Command(async () => await Insertar());
+
         public ICommand Volvercommand => new Command(async () => await Volver());
        
         #endregion

@@ -24,7 +24,7 @@ namespace MVVM_implementacion_Jerh.Datos
             }) ;
             
         }
-        public async Task<List<Mpokemon>> MostrarPokemon(Mpokemon parametros)
+        public async Task<List<Mpokemon>> MostrarPokemon()
         { 
         return (await Cconexion.firebase.Child("Pokemon")
                 .OnceAsync<Mpokemon>())
