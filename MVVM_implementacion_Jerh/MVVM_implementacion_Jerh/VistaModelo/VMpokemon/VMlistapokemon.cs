@@ -25,6 +25,7 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         public VMlistapokemon(INavigation navigation)
         {
             Navigation = navigation;
+            Mostrarpokemon();
         }
         #endregion
         #region Objetivo;
