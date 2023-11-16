@@ -6,6 +6,10 @@ using MVVM_implementacion_Jerh.Conexion;
 using Firebase.Database.Query;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+
+using Firebase.Database;
+
 namespace MVVM_implementacion_Jerh.Datos
 {
     public class DPokemon
@@ -24,8 +28,8 @@ namespace MVVM_implementacion_Jerh.Datos
             }) ;
             
         }
-        public async Task<List<Mpokemon>> MostrarPokemon()
-        { 
+        public async Task<ObservableCollection<Mpokemon>> MostrarPokemon()
+        { /*
         return (await Cconexion.firebase.Child("Pokemon")
                 .OnceAsync<Mpokemon>())
                 .Select(item=>new Mpokemon
@@ -39,8 +43,14 @@ namespace MVVM_implementacion_Jerh.Datos
                     Poder = item.Object.Poder
 
                 }).ToList();
+            */
+            var data = Cconexion.firebase
+                .Child("Pokemon").AsObservable<Mpokemon>().AsObservableCollection();
+            return data;
                 
                 
+               
+
         }
     }
 }
