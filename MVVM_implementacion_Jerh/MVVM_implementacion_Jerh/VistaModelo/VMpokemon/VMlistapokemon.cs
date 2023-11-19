@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using MVVM_implementacion_Jerh.Modelo;
 using MVVM_implementacion_Jerh.Vista.Pokemon;
 using MVVM_implementacion_Jerh.Datos;
+using System.Collections.ObjectModel;
 
 namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 {
@@ -19,7 +20,7 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         #region VARIABLES
        
 
-        List<Mpokemon> _Listapokemon;
+        ObservableCollection<Mpokemon> _Listapokemon;
         #endregion
         #region Contructor
         public VMlistapokemon(INavigation navigation)
@@ -29,10 +30,12 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         }
         #endregion
         #region Objetivo;
-        public List<Mpokemon> Listapokemon
+        public ObservableCollection<Mpokemon> Listapokemon
         {
             get { return _Listapokemon; }
-            set { SetValue(ref _Listapokemon, value); }
+            set { SetValue(ref _Listapokemon, value);
+                OnpropertyChanged();
+            }
         }
 
         #endregion

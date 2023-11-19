@@ -44,8 +44,10 @@ namespace MVVM_implementacion_Jerh.Datos
 
                 }).ToList();
             */
-            var data = Cconexion.firebase
-                .Child("Pokemon").AsObservable<Mpokemon>().AsObservableCollection();
+            var data = await Task.Run(()=> Cconexion.firebase
+                .Child("Pokemon")
+                .AsObservable<Mpokemon>()
+                .AsObservableCollection());
             return data;
                 
                 
