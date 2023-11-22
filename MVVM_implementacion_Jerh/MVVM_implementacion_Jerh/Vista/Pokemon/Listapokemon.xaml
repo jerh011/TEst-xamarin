@@ -15,16 +15,24 @@
                TextColor="#FD8298"/>
         <CollectionView Background="#EAEDEC"
                         Grid.Row="1"
-                        ItemsSource="{Binding Listapokemon}">
-            <CollectionView.ItemTemplate>
+                        ItemsSource="{Binding Listapokemon}"
+                        Margin="0,0,0,0">
+                <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="2"
+                                 HorizontalItemSpacing="10"
+                                 VerticalItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid RowDefinitions="100, *"
-                  Margin="0,10,0,0">
+                  Margin="10,10,0,0">
                         <Frame Grid.Row="1" WidthRequest="250"
                        HorizontalOptions="Center"
                        CornerRadius="15"
-                       Margin="0,-38,0,0"
-                      BackgroundColor="{Binding Colorfondo}">
+                       Margin="0,-68,0,0"
+                      BackgroundColor="{Binding Colorfondo}"
+                               HasShadow="False">
                             <StackLayout 
                         Margin="0,70,0,0">
                                 <Label Text="{Binding NroOrden}"/>
@@ -44,6 +52,7 @@
                         <Image Source="{Binding Icono}"
                        Grid.RowSpan="2"
                        HeightRequest="160"
+                      Margin="45,0,0,0"
                        VerticalOptions="StartAndExpand"/>
 
                     </Grid>
