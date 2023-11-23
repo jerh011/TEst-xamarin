@@ -7,61 +7,61 @@
     <Grid RowDefinitions="60,*"
           BackgroundColor="#FSF6F6">
         
-        <Label Text="POKEDEX"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"
-               FontSize="28"
-               FontAttributes="Bold"
-               TextColor="#FD8298"/>
+        <Label Text="POKEDEX" HorizontalOptions="Center" VerticalOptions="Center" FontSize="28" FontAttributes="Bold" TextColor="#FD8298"/>
+        
         <CollectionView Background="#EAEDEC"
-                        Grid.Row="1"
-                        ItemsSource="{Binding Listapokemon}"
-                        Margin="0,0,0,0">
-                <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical"
-                                 Span="2"
-                                 HorizontalItemSpacing="10"
-                                 VerticalItemSpacing="10"/>
+                            Grid.Row="1"
+                            ItemsSource="{Binding Listapokemon}"
+                            Margin="0,0,0,0">
+        
+            <CollectionView.ItemsLayout>
+
+                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10" />
+                
             </CollectionView.ItemsLayout>
-                    <CollectionView.ItemTemplate>
+
+            <CollectionView.ItemTemplate>
+                
                 <DataTemplate>
-                    <Grid RowDefinitions="100, *"
-                  Margin="10,10,0,0">
-                        <Frame Grid.Row="1" WidthRequest="250"
-                       HorizontalOptions="Center"
-                       CornerRadius="15"
-                       Margin="0,-68,0,0"
-                      BackgroundColor="{Binding Colorfondo}"
-                               HasShadow="False">
-                            <StackLayout 
-                        Margin="0,70,0,0">
-                                <Label Text="{Binding NroOrden}"/>
-                                <Label Text="{Binding Nombre}"
-                               CharacterSpacing="1"
-                               FontSize="20"
-                               Margin="0,0,0,5"/>
-                                <Button Text="{Binding Poder}"
-                                CornerRadius="30"
-                                HorizontalOptions="Start"
-                                TextTransform="None"
-                                HeightRequest="40"
-                                BackgroundColor="{Binding ColorPoder}"/>
-                            </StackLayout>
-                        </Frame>
+                
+                        <Grid RowDefinitions="100, *"
+                          Margin="10,10,0,0">
+                            <Frame Grid.Row="1" WidthRequest="250"
+                               HorizontalOptions="Center"
+                               CornerRadius="15"
+                               Margin="0,-68,0,0"
+                              BackgroundColor="{Binding Colorfondo}"
+                                       HasShadow="False">
+                                <StackLayout 
+                                Margin="0,70,0,0">
+                                    <Label Text="{Binding NroOrden}"/>
+                                    <Label Text="{Binding Nombre}"
+                                       CharacterSpacing="1"
+                                       FontSize="20"
+                                       Margin="0,0,0,5"/>
+                                    <Button Text="{Binding Poder}"
+                                        CornerRadius="30"
+                                        HorizontalOptions="Start"
+                                        TextTransform="None"
+                                        HeightRequest="40"
+                                        BackgroundColor="{Binding ColorPoder}"/>
+                                </StackLayout>
+                            </Frame>
 
-                        <Image Source="{Binding Icono}"
-                       Grid.RowSpan="2"
-                       HeightRequest="160"
-                      Margin="45,0,0,0"
-                       VerticalOptions="StartAndExpand"/>
+                            <Image Source="{Binding Icono}"
+                               Grid.RowSpan="2"
+                               HeightRequest="160"
+                              Margin="45,0,0,0"
+                               VerticalOptions="StartAndExpand"/>
 
-                    </Grid>
-
+                        </Grid>
+                      
                 </DataTemplate>
+              
             </CollectionView.ItemTemplate>
-        
+           
         </CollectionView>
-        
+       
         <Button Text="+"
                 Grid.Row="1"
                 HeightRequest="100"

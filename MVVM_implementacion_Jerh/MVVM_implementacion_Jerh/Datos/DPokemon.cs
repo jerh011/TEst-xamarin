@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 
 using Firebase.Database;
+using Xamarin.Essentials;
 
 namespace MVVM_implementacion_Jerh.Datos
 {
@@ -19,14 +20,14 @@ namespace MVVM_implementacion_Jerh.Datos
             await Cconexion.firebase.Child("Pokemon").PostAsync(new Mpokemon
             {
                 Colorfondo = parametros.Colorfondo,
-                ColorPoder= parametros.Colorfondo,
+                ColorPoder = parametros.Colorfondo,
                 Icono = parametros.Icono,
                 Nombre = parametros.Nombre,
                 NroOrden = parametros.NroOrden,
                 Poder = parametros.Poder
-               
-            }) ;
-            
+
+            });
+
         }
         public async Task<ObservableCollection<Mpokemon>> MostrarPokemon()
         { /*
@@ -44,15 +45,18 @@ namespace MVVM_implementacion_Jerh.Datos
 
                 }).ToList();
             */
-            var data = await Task.Run(()=> Cconexion.firebase
+            var data = await Task.Run(() => Cconexion.firebase
                 .Child("Pokemon")
                 .AsObservable<Mpokemon>()
                 .AsObservableCollection());
             return data;
-                
-                
-               
 
+        }
+
+
+        public async Task Eliminarpokemon(string ID)
+        {
+            await Cconexion.firebase.Child("Pokemon").Child(ID).DeleteAsync();
         }
     }
 }

@@ -22,6 +22,7 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         string _TxtNro;
         string _TxtPoder;
         string _TxtIcono;
+        string _TxtID;
         #endregion
         #region Contructor
         public VMregistropokemon(INavigation navigation)
@@ -45,6 +46,11 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
             get { return _TxtNombre; }
             set { SetValue(ref _TxtNombre, value); }
         }
+        //public string TxtID
+        //{
+        //    get { return _TxtID; }
+        //    set { SetValue(ref _TxtID, value); }
+        //}
         public string TxtNro
         {
             get { return _TxtNro; }
@@ -74,6 +80,12 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
             parametros.Poder= TxtPoder;
             await funcion.Insertarpokemon(parametros);
             await Volver();
+        }
+
+        public async Task Eliminar(Mpokemon mpokemon) {
+
+            var funcion = new DPokemon();
+            await funcion.Eliminarpokemon(mpokemon.Idpokemon);
         }
 
         public async Task Volver()
