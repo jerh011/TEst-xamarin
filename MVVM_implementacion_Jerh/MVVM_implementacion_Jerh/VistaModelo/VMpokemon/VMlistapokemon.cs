@@ -50,16 +50,16 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         {
             await Navigation.PushAsync(new Registrarpokemon());
         }
-        public void Sumar()
+        public async Task IraEditar()
         {
-          
+            await Navigation.PushAsync(new Editarpokemon());
         }
-       
+
         #endregion.
-       
+
         #region COMANDOS
         public ICommand IrARegistrocommand => new Command(async () => await IrARegistro());
-        public ICommand Suymarcommand => new Command(Sumar);
+        public ICommand IraEditarcommand => new Command(async () => await IraEditar());
         #endregion
 
 

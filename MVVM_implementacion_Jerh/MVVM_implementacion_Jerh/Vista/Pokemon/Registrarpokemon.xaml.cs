@@ -17,6 +17,7 @@ namespace MVVM_implementacion_Jerh.Vista.Pokemon
         {
             InitializeComponent();
             BindingContext = new VMregistropokemon(Navigation);
+
         }
     }
 }
