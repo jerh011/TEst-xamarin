@@ -73,7 +73,7 @@ namespace MVVM_implementacion_Jerh.Datos
 
         public async Task Eliminarpokemon(Mpokemon pxc)
         {
-            string Borrar = pxc.NroOrden;
+            string Borrar = pxc.Idpokemon;
             await Cconexion.firebase.Child("Pokemon").Child(Borrar).DeleteAsync();
         }
     }
