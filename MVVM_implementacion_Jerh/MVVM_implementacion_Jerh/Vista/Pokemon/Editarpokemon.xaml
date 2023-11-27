@@ -34,7 +34,7 @@
                        PlaceholderColor="White"
                      
                        HorizontalOptions="StartAndExpand"
-                       Text="{Binding TxtNombre}"/>
+                       Text="{Binding _poquimon.Nombre}"/>
             </StackLayout>
             <!--Ingrese el color fondo-->
             <StackLayout Orientation="Horizontal">
@@ -50,7 +50,7 @@
                        PlaceholderColor="White"
                        TextTransform="Lowercase"
                        HorizontalOptions="StartAndExpand"
-                       Text="{Binding TxtColorFondo}"/>
+                       Text="{Binding _poquimon.Colorfondo}"/>
             </StackLayout>
             <!--Ingrese el número-->
             <StackLayout Orientation="Horizontal">
@@ -67,7 +67,7 @@
                        PlaceholderColor="White"
                        TextTransform="Lowercase"
                        HorizontalOptions="StartAndExpand"
-                       Text="{Binding TxtNro}"
+                       Text="{Binding _poquimon.NroOrden}"
                        Keyboard="Numeric"/>
             </StackLayout>
             <!--Icono-->
@@ -83,7 +83,7 @@
                        TextColor="#ffeb72"
                        PlaceholderColor="White"
                        HorizontalOptions="StartAndExpand"
-                       Text="{Binding TxtIcono}"
+                       Text="{Binding _poquimon.Icono}"
                        />
             </StackLayout>
             <!--Ingrese el poder-->
@@ -99,7 +99,7 @@
                        TextColor="#ffeb72"
                        PlaceholderColor="White"
                        HorizontalOptions="StartAndExpand"
-                       Text="{Binding TxtPoder}"/>
+                       Text="{Binding _poquimon.Poder}"/>
             </StackLayout>
             <!--Ingrese el color del poder-->
             <StackLayout Orientation="Horizontal">
@@ -115,7 +115,7 @@
                        PlaceholderColor="White"
                        TextTransform="Lowercase"
                        HorizontalOptions="StartAndExpand"
-                       Text="{Binding TxtColorPoder}"/>
+                       Text="{Binding _poquimon.ColorPoder}"/>
 
             </StackLayout>
 
@@ -140,6 +140,7 @@
                     <StackLayout 
                         Margin="0,70,0,0">
                         <Label Text="{Binding TxtNro}"/>
+                        <Label Text="{Binding _poquimon.Idpokemon}"/>
                         <Label Text="{Binding TxtNombre}"
                                CharacterSpacing="1"
                                FontSize="20"

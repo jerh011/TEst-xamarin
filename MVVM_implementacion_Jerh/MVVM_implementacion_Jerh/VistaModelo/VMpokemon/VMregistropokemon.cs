@@ -82,12 +82,7 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
             await Volver();
         }
 
-        public async Task Eliminar(Mpokemon mpokemon) {
-
-            var funcion = new DPokemon();
-            await funcion.Eliminarpokemon(mpokemon.Idpokemon);
-        }
-
+       
         public async Task Volver()
         {
             await Navigation.PopAsync();

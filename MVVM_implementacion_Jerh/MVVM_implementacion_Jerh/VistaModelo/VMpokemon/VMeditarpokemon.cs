@@ -24,44 +24,46 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         string _TxtNro;
         string _TxtPoder;
         string _TxtIcono;
-        string _TxtID;
+       public Mpokemon _poquimon { get; set; }
         #endregion
         #region Contructor
-        public VMeditarpokemon(INavigation navigation)
+        public VMeditarpokemon(INavigation navigation, Mpokemon poquimon)
         {
             Navigation = navigation;
+            _poquimon = poquimon;
+
         }
         #endregion
         #region Objetivo;
         public string TxtColorFondo
         {
-            get { return _TxtColorFondo; }
+            get { return _poquimon.Colorfondo; }
             set { SetValue(ref _TxtColorFondo, value); }
         }
         public string TxtColorPoder
         {
-            get { return _TxtColorPoder; }
+            get { return _poquimon.ColorPoder; }
             set { SetValue(ref _TxtColorPoder, value); }
         }
         public string TxtNombre
         {
-            get { return _TxtNombre; }
+            get { return _poquimon.Nombre; }
             set { SetValue(ref _TxtNombre, value); }
         }
        
         public string TxtNro
         {
-            get { return _TxtNro; }
+            get { return _poquimon.NroOrden; }
             set { SetValue(ref _TxtNro, value); }
         }
         public string TxtPoder
         {
-            get { return _TxtPoder; }
+            get { return _poquimon.Poder; }
             set { SetValue(ref _TxtPoder, value); }
         }
         public string TxtIcono
         {
-            get { return _TxtIcono; }
+            get { return _poquimon.Icono; }
             set { SetValue(ref _TxtIcono, value); }
         }
 
@@ -81,11 +83,12 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
             await Volver();
         }
 
-        public async Task Eliminar(Mpokemon mpokemon)
+        public void Eliminar(Mpokemon mpokemon)
         {
 
             var funcion = new DPokemon();
-            await funcion.Eliminarpokemon(mpokemon.Idpokemon);
+            funcion.Eliminarpokemon(mpokemon);
+            Volver();
         }
 
         public async Task Volver()
@@ -101,6 +104,7 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         #endregion.
         #region COMANDOS
         public ICommand Insertarcommand => new Command(async () => await Insertar());
+        public ICommand Eliminarcommand => new Command<Mpokemon>(async (mpokemon) =>  Eliminar(mpokemon));
 
         public ICommand Volvercommand => new Command(async () => await Volver());
 
