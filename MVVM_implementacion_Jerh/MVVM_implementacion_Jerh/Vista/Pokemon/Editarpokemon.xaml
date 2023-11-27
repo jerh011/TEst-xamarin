@@ -161,26 +161,46 @@
 
             </Grid>
 
-            <Frame HorizontalOptions="Center"
-                   Padding="6"
-                   Margin="0,10,0,0"
-                   CornerRadius="15"
-                   HasShadow="False"
-                   BackgroundColor="#FEC100">
-                <Button
-                    Text="+"
-                    HorizontalOptions="Center"
-                    BackgroundColor="#FEC100"
-                    BorderColor="#FFE488"
-                    BorderWidth="6"
-                    CornerRadius="15"
-                    FontSize="25"
-                    WidthRequest="60"
-                    HeightRequest="60"
-                    Command="{Binding Insertarcommand}"/>
 
-            </Frame>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Frame HorizontalOptions="Center"
+                       Padding="6"
+                       Margin="0,0,5,0"
+                       CornerRadius="15"
+                       HasShadow="False"
+                       BackgroundColor="#FEC100">
+                    <Button
+                        Text="-"
+                        HorizontalOptions="Center"
+                        BackgroundColor="Red"
+                        BorderColor="#FFE488"
+                        BorderWidth="6"
+                        CornerRadius="15"
+                        FontSize="25"
+                        WidthRequest="60"
+                        HeightRequest="60"
+                        Command="{Binding Eliminarcommand}"/>   
+                </Frame>
 
+                <Frame HorizontalOptions="Center"
+                       Padding="6"
+                       Margin="0,0,0,0"
+                       CornerRadius="15"
+                       HasShadow="False"
+                       BackgroundColor="#FEC100">       
+                    <Button
+                        ImageSource="https://i.ibb.co/hLMhCVb/editar-2.png"
+                        HorizontalOptions="Center"
+                        BackgroundColor="Blue"
+                        BorderColor="#FFE488"
+                        BorderWidth="6"
+                        CornerRadius="15"
+                        FontSize="25"
+                        WidthRequest="60"
+                        HeightRequest="60"
+                        Command="{Binding Editarcommand}"/>   
+                </Frame>
+            </StackLayout>
         </StackLayout>
     </Grid>
 

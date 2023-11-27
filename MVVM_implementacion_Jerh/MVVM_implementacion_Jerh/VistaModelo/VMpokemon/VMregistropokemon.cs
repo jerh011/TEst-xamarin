@@ -44,7 +44,7 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
         public string TxtNombre
         {
             get { return _TxtNombre; }
-            set { SetValue(ref _TxtNombre, value); }
+         
         }
         //public string TxtID
         //{

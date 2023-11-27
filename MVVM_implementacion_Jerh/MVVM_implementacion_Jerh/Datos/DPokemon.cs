@@ -71,10 +71,27 @@ namespace MVVM_implementacion_Jerh.Datos
 
         }
 
-        public async Task Eliminarpokemon(Mpokemon pxc)
+        public async Task Eliminarpokemon(Mpokemon mpokemon)
         {
-            string Borrar = pxc.NroOrden;
-            await Cconexion.firebase.Child("Pokemon").Child(Borrar).DeleteAsync();
+            string id = mpokemon.Idpokemon;
+            await Cconexion.firebase.Child("Pokemon").Child(id).DeleteAsync();
         }
+
+
+        public async Task Actualizar(Mpokemon parametros)
+        {
+            await Cconexion.firebase.Child("Pokemon").Child(parametros.Idpokemon).PutAsync(new Mpokemon
+            {
+                Colorfondo = parametros.Colorfondo,
+                ColorPoder = parametros.ColorPoder,
+                Icono = parametros.Icono,
+                Nombre = parametros.Nombre,
+                NroOrden = parametros.NroOrden,
+                Poder = parametros.Poder
+
+            });
+
+        }
+
     }
 }

@@ -69,26 +69,28 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 
         #endregion
         #region PROCESOS
-        public async Task Insertar()
+        public async Task Editar()
         {
             var funcion = new DPokemon();
             var parametros = new Mpokemon();
+            parametros.Idpokemon = _poquimon.Idpokemon;
             parametros.Colorfondo = TxtColorFondo;
             parametros.ColorPoder = TxtColorPoder;
             parametros.Icono = TxtIcono;
             parametros.Nombre = TxtNombre;
             parametros.NroOrden = TxtNro;
             parametros.Poder = TxtPoder;
-            await funcion.Insertarpokemon(parametros);
+            
+            await funcion.Actualizar(parametros);
             await Volver();
         }
 
-        public void Eliminar(Mpokemon mpokemon)
+        public async Task Eliminar()
         {
 
             var funcion = new DPokemon();
-            funcion.Eliminarpokemon(mpokemon);
-            Volver();
+            await funcion.Eliminarpokemon(_poquimon);
+            await Volver(); ;
         }
 
         public async Task Volver()
@@ -103,8 +105,8 @@ namespace MVVM_implementacion_Jerh.VistaModelo.VMpokemon
 
         #endregion.
         #region COMANDOS
-        public ICommand Insertarcommand => new Command(async () => await Insertar());
-        public ICommand Eliminarcommand => new Command<Mpokemon>(async (mpokemon) =>  Eliminar(mpokemon));
+        public ICommand Editarcommand => new Command(async () => await Editar());
+        public ICommand Eliminarcommand => new Command(async () => await Eliminar());
 
         public ICommand Volvercommand => new Command(async () => await Volver());
 
