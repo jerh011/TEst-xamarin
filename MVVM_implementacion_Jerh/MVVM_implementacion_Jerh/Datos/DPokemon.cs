@@ -64,20 +64,13 @@ namespace MVVM_implementacion_Jerh.Datos
                     Icono = item.Object.Icono,
                     NroOrden = item.Object.NroOrden,
                     Poder = item.Object.Poder
-
                 }).ToList();
-            
-            
-
         }
-
         public async Task Eliminarpokemon(Mpokemon mpokemon)
         {
             string id = mpokemon.Idpokemon;
             await Cconexion.firebase.Child("Pokemon").Child(id).DeleteAsync();
         }
-
-
         public async Task Actualizar(Mpokemon parametros)
         {
             await Cconexion.firebase.Child("Pokemon").Child(parametros.Idpokemon).PutAsync(new Mpokemon
