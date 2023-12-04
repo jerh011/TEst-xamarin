@@ -1,0 +1,16 @@
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\bin\Debug\netstandard2.0\MVVM_implementacion_Jerh.deps.json
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\bin\Debug\netstandard2.0\MVVM_implementacion_Jerh.dll
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\bin\Debug\netstandard2.0\ref\MVVM_implementacion_Jerh.dll
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\bin\Debug\netstandard2.0\MVVM_implementacion_Jerh.pdb
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\MVVM_implementacion_Jerh.csproj.AssemblyReference.cache
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\MVVM_implementacion_Jerh.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\Vista\Pokemon\Listapokemon.xaml.g.cs
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\Vista\Pokemon\Registrarpokemon.xaml.g.cs
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\MVVM_implementacion_Jerh.AssemblyInfoInputs.cache
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\MVVM_implementacion_Jerh.AssemblyInfo.cs
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\MVVM_implementacion_Jerh.csproj.CoreCompileInputs.cache
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\MVVM_implementacion_Jerh.dll
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\refint\MVVM_implementacion_Jerh.dll
+C:\Users\Jesus\source\repos\TEst xamarin\MVVM_implementacion_Jerh\MVVM_implementacion_Jerh\obj\Debug\netstandard2.0\MVVM_implementacion_Jerh.pdb
