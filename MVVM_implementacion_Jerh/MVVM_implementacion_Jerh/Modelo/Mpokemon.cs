@@ -12,7 +12,6 @@ namespace MVVM_implementacion_Jerh.Modelo
         public string Nombre { get; set; }
         public string NroOrden { get; set; }
         public string Poder { get; set; }
-        public string Idpokemon { get; set; }
 
     }
 }

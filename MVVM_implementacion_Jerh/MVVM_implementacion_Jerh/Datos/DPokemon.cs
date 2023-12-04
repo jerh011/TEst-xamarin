@@ -30,34 +30,14 @@ namespace MVVM_implementacion_Jerh.Datos
             });
 
         }
-        /*public async Task<ObservableCollection<Mpokemon>> MostrarPokemon()
-        {
-            var data = await Task.Run(() => Cconexion.firebase
-          .Child("Pokemon")
-          .AsObservable<Mpokemon>()
-          .AsObservableCollection()
-          .Select(async item => new Mpokemon
-          {
-              Idpokemon =item.Key,
-              Nombre = item.Nombre,
-              Colorfondo = item.Colorfondo,
-              ColorPoder = item.Colorfondo,
-              Icono = item.Icono,
-              NroOrden = item.NroOrden,
-              Poder = item.Poder
-
-          }));
-
-
-            return data;
-        }*/
+        
         public async Task<List<Mpokemon>> MostrarPokemon2()
         { 
         return (await Cconexion.firebase.Child("Pokemon")
                 .OnceAsync<Mpokemon>())
                 .Select(item=>new Mpokemon
                 { 
-                    Idpokemon=item.Key,
+                 
                     Nombre=item.Object.Nombre,
                     Colorfondo = item.Object.Colorfondo,
                     ColorPoder = item.Object.ColorPoder,
@@ -66,25 +46,5 @@ namespace MVVM_implementacion_Jerh.Datos
                     Poder = item.Object.Poder
                 }).ToList();
         }
-        public async Task Eliminarpokemon(Mpokemon mpokemon)
-        {
-            string id = mpokemon.Idpokemon;
-            await Cconexion.firebase.Child("Pokemon").Child(id).DeleteAsync();
-        }
-        public async Task Actualizar(Mpokemon parametros)
-        {
-            await Cconexion.firebase.Child("Pokemon").Child(parametros.Idpokemon).PutAsync(new Mpokemon
-            {
-                Colorfondo = parametros.Colorfondo,
-                ColorPoder = parametros.ColorPoder,
-                Icono = parametros.Icono,
-                Nombre = parametros.Nombre,
-                NroOrden = parametros.NroOrden,
-                Poder = parametros.Poder
-
-            });
-
-        }
-
     }
 }
